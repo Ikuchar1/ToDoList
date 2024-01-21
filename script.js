@@ -18,6 +18,13 @@ function addTask(){
     }
 }
 
+document.getElementById("input-box").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Prevents the default Enter key behavior (e.g., form submission)
+      addTask();
+    }
+  });
+
 //deletes task
 listContainer.addEventListener("click", function(e){
 
